@@ -21,6 +21,8 @@ app.use(router)
 
 app.get('/', (req, res) => {
     res.send('Hello world')
-  })
+})
 
-app.listen(3333, () => console.log("========== Server is running =========="))
+const port = process.env.PORT || 3333
+
+app.listen(port, () => console.log("========== Server is running =========="))
