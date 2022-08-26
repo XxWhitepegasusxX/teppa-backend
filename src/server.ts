@@ -6,7 +6,7 @@ const app = express()
 
 app.use(
     cors({
-      origin: ['https://teppa-frontend.vercel.app', 'http://localhost:3000'],
+      origin: ['https://teppa-frontend.vercel.app', '*'],
     })
   )
 
