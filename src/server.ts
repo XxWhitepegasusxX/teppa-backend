@@ -4,7 +4,11 @@ import cors from 'cors'
 
 const app = express()
 
-app.use(cors())
+app.use(
+    cors({
+      origin: ['https://teppa-frontend.vercel.app', 'http://localhost:3000'],
+    })
+  )
 
 app.use((req, res, next) => {
 	//Qual site tem permissão de realizar a conexão, no exemplo abaixo está o "*" indicando que qualquer site pode fazer a conexão
